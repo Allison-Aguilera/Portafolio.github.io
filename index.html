@@ -83,6 +83,8 @@
     .timeline-list { list-style: none; }
     .timeline-list li { font-size: .875rem; color: var(--muted); padding: .3rem 0 .3rem 1.1rem; position: relative; line-height: 1.6; }
     .timeline-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent2); font-size: .75rem; }
+    .tools-used { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+    .tool-tag { font-size: .72rem; font-family: var(--mono); color: var(--muted); border: 1px solid var(--border); padding: .2rem .6rem; border-radius: .3rem; }
 
     #proyectos { background: var(--bg); }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -108,9 +110,8 @@
     .contact-inner h3 { font-size: 1.75rem; font-weight: 700; margin-bottom: .75rem; }
     .contact-inner p { color: var(--muted); max-width: 480px; margin: 0 auto 2rem; }
     .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .contact-link { display: flex; align-items: center; gap: .5rem; font-size: .9rem; color: var(--muted); text-decoration: none; border: 1px solid var(--border); padding: .6rem 1.25rem; border-radius: .5rem; transition: color .2s, border-color .2s; }
+    .contact-link { display: flex; align-items: center; gap: .5rem; font-size: .9rem; color: var(--muted); text-decoration: none; border: 1px solid var(--border); padding: .6rem 1.25rem; border-radius: .5rem; transition: color .2s, border-color .2s, background .2s; }
     .contact-link:hover { color: var(--accent2); border-color: var(--accent2); }
-    .contact-link.github:hover { color: var(--text); border-color: var(--text); }
     .contact-link.linkedin { color: #0a66c2; border-color: rgba(10,102,194,.4); }
     .contact-link.linkedin:hover { background: rgba(10,102,194,.1); border-color: #0a66c2; }
     .contact-link.cv { color: var(--teal); border-color: rgba(45,212,191,.35); }
@@ -150,12 +151,12 @@
     <p class="hero-role">Analista de Datos · <span>Desarrolladora</span> · Automatización de Procesos</p>
     <p class="hero-desc">
       Egresada de Informática Administrativa de la UNAH. Convierto procesos manuales en flujos inteligentes
-      usando Microsoft 365, Power Automate y desarrollo web. Proactiva, metódica y siempre aprendiendo.
+      con Power Automate, SharePoint y desarrollo web. Proactiva, metódica y siempre aprendiendo.
     </p>
     <div class="hero-cta">
+      <a href="https://raw.githubusercontent.com/Allison-Aguilera/Portafolio.github.io/main/CV_Allison_Aguilera_.pdf" target="_blank" class="btn-cv">📄 Descargar CV</a>
       <a href="#experiencia" class="btn-primary">Ver experiencia</a>
       <a href="#proyectos" class="btn-outline">Proyectos</a>
-      <a href="https://raw.githubusercontent.com/Allison-Aguilera/Portafolio.github.io/main/CV_Allison_Aguilera_.pdf" target="_blank" class="btn-cv">📄 Descargar CV</a>
     </div>
   </div>
 </section>
@@ -168,8 +169,8 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>Soy <strong>Allison Andrea Aguilera Bonilla</strong>, egresada de Informática Administrativa de la <strong>Universidad Nacional Autónoma de Honduras</strong>.</p>
-        <p>Me apasiona diseñar soluciones que conectan personas, datos y procesos. Cuento con experiencia real en entornos institucionales donde la automatización y la trazabilidad marcan la diferencia.</p>
-        <p>Busco aportar valor a equipos donde la mejora continua y el análisis de datos sean el centro del trabajo.</p>
+        <p>Me apasiona diseñar herramientas que conectan personas, datos y procesos. He trabajado en entornos institucionales donde cada automatización significa menos errores y más tiempo para lo que importa.</p>
+        <p>Busco equipos donde la mejora continua y el análisis de datos sean parte del día a día.</p>
       </div>
       <div class="about-stats reveal">
         <div class="stat-card">
@@ -258,33 +259,40 @@
     <h2 class="section-title reveal">Trayectoria</h2>
     <div class="timeline reveal">
 
-      <!-- BCH -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <p class="timeline-period">Noviembre 2025 – Abril 2026</p>
         <p class="timeline-role">Practicante — Área de Compras y Contrataciones</p>
         <p class="timeline-org">Banco Central de Honduras · Tegucigalpa</p>
         <ul class="timeline-list">
-          <li>Diseñé flujos que conectan adjudicación de compras, documentos en firma y contratos suscritos — todo sin intervención manual.</li>
-          <li>Construí un sistema de alertas inteligentes: equipos notificados cuando se les asigna o reasigna un proceso, con historial del responsable anterior.</li>
-          <li>Implementé avisos automáticos para procesos estancados y seguimiento de fechas clave de vencimiento.</li>
-          <li>Centralicé el acceso a información contractual por departamento, con notificaciones ante consultas no autorizadas.</li>
-          <li>Automaticé la exportación semanal de listas de SharePoint para reportes de gestión.</li>
-          <li>Elaboré manual de usuario de 22 páginas para capacitación interna del personal.</li>
+          <li>Construí una herramienta de seguimiento de procesos de compra que conecta etapas desde la adjudicación hasta el contrato suscrito, replicando información automáticamente entre listas de SharePoint.</li>
+          <li>Cada vez que un proceso se asigna o reasigna, ambos responsables reciben una notificación — el anterior sabe que entregó, el nuevo sabe de dónde viene.</li>
+          <li>Implementé alertas automáticas para procesos que llevan varios días sin movimiento y para fechas clave de vencimiento.</li>
+          <li>Configuré avisos de nuevos eventos con fechas establecidas y exportación semanal automática de reportes desde SharePoint.</li>
+          <li>Diseñé un control de acceso a información contractual por departamento, con notificaciones ante consultas no autorizadas.</li>
         </ul>
+        <div class="tools-used">
+          <span class="tool-tag">Power Automate</span>
+          <span class="tool-tag">SharePoint</span>
+          <span class="tool-tag">Microsoft Forms</span>
+        </div>
       </div>
 
-      <!-- PROYECTO UNIVERSITARIO -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <p class="timeline-period">Proyecto universitario · UNAH</p>
-        <p class="timeline-role">Desarrolladora Backend — Sistema de Gestión</p>
+        <p class="timeline-role">Desarrolladora Backend</p>
         <p class="timeline-org">Asociación para el Servicio Mundial · Honduras</p>
         <ul class="timeline-list">
-          <li>Participé en el desarrollo de un sistema web institucional como parte de mi formación en la UNAH.</li>
-          <li>Desarrollé el backend con PHP y Laravel, modelé la base de datos en SQL y validé endpoints con Postman.</li>
-          <li>Trabajo en equipo con metodología de desarrollo estructurada, desde el diseño hasta la implementación.</li>
+          <li>Colaboré en el desarrollo de una aplicación web institucional para esta organización como parte de mi formación universitaria.</li>
+          <li>Me encargué del backend con PHP y Laravel, el modelado de la base de datos en SQL y la validación de endpoints con Postman.</li>
         </ul>
+        <div class="tools-used">
+          <span class="tool-tag">PHP</span>
+          <span class="tool-tag">Laravel</span>
+          <span class="tool-tag">SQL</span>
+          <span class="tool-tag">Postman</span>
+        </div>
       </div>
 
     </div>
@@ -300,38 +308,36 @@
 
       <div class="project-card reveal">
         <div class="project-icon">🔄</div>
-        <h3 class="project-title">Pipeline de Contratos Automatizado</h3>
+        <h3 class="project-title">Herramienta de seguimiento de compras</h3>
         <p class="project-desc">
-          Flujo end-to-end que conecta adjudicación, firma y registro de contratos.
-          Cada etapa replica datos automáticamente y notifica a los responsables en tiempo real.
+          Flujos que conectan adjudicación, documentos en firma y contratos suscritos en SharePoint.
+          Cada etapa avanza sola y notifica a los responsables sin intervención manual.
         </p>
         <div class="project-tags">
           <span class="project-tag">Power Automate</span>
           <span class="project-tag">SharePoint</span>
-          <span class="project-tag">Microsoft 365</span>
         </div>
       </div>
 
       <div class="project-card reveal">
         <div class="project-icon">🔔</div>
-        <h3 class="project-title">Sistema de Alertas Inteligentes</h3>
+        <h3 class="project-title">Red de alertas para equipos</h3>
         <p class="project-desc">
-          Red de notificaciones automáticas para reasignaciones, vencimientos, procesos estancados
-          y nuevos eventos — nadie se queda sin saber qué le toca.
+          Notificaciones automáticas para reasignaciones, procesos estancados, vencimientos y nuevos eventos.
+          Todos informados, sin depender de correos manuales.
         </p>
         <div class="project-tags">
           <span class="project-tag">Power Automate</span>
           <span class="project-tag">SharePoint</span>
-          <span class="project-tag">Microsoft Forms</span>
         </div>
       </div>
 
       <div class="project-card reveal">
         <div class="project-icon">🌐</div>
-        <h3 class="project-title">Sistema Web Institucional</h3>
+        <h3 class="project-title">Aplicación web institucional</h3>
         <p class="project-desc">
-          Aplicación web desarrollada para la Asociación para el Servicio Mundial como proyecto universitario.
-          Backend en PHP/Laravel, base de datos SQL y pruebas de API con Postman.
+          Desarrollada para la Asociación para el Servicio Mundial como proyecto universitario.
+          Backend con PHP y Laravel, base de datos SQL, pruebas de API con Postman.
         </p>
         <div class="project-tags">
           <span class="project-tag">PHP</span>
@@ -354,21 +360,10 @@
       <h3>¿Tienes un proyecto en mente?</h3>
       <p>Estoy disponible para oportunidades laborales, colaboraciones y nuevos retos en análisis de datos y automatización.</p>
       <div class="contact-links">
-        <a href="mailto:allisonaguilera0103@gmail.com" class="contact-link">
-          ✉ allisonaguilera0103@gmail.com
-        </a>
-        <a href="tel:+50499546031" class="contact-link">
-          📞 (504) 9954-6031
-        </a>
-        <a href="https://github.com/Allison-Aguilera" target="_blank" class="contact-link github">
-          ⌥ GitHub
-        </a>
-        <a href="https://linkedin.com/in/allison-aguilera" target="_blank" class="contact-link linkedin">
-          in LinkedIn
-        </a>
-        <a href="https://raw.githubusercontent.com/Allison-Aguilera/Portafolio.github.io/main/CV_Allison_Aguilera_.pdf" target="_blank" class="contact-link cv">
-          📄 Descargar CV
-        </a>
+        <a href="mailto:allisonaguilera0103@gmail.com" class="contact-link">✉ allisonaguilera0103@gmail.com</a>
+        <a href="tel:+50499546031" class="contact-link">📞 (504) 9954-6031</a>
+        <a href="https://github.com/Allison-Aguilera" target="_blank" class="contact-link">⌥ GitHub</a>
+        <a href="https://linkedin.com/in/allison-aguilera" target="_blank" class="contact-link linkedin">in LinkedIn</a>
       </div>
     </div>
   </div>
